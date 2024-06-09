@@ -535,11 +535,6 @@ export const BookmarkList = [
     folder: "News",
   },
   {
-    name: "Google News",
-    domain: "https://news.google.com/topstories",
-    folder: "News",
-  },
-  {
     name: "UNDERkg",
     domain: "http://underkg.co.kr/",
     folder: "News",
@@ -641,11 +636,6 @@ export const BookmarkList = [
   {
     name: "Auction",
     domain: "http://auction.co.kr/",
-    folder: "Shopping",
-  },
-  {
-    name: "Apple",
-    domain: "https://www.apple.com/kr/",
     folder: "Shopping",
   },
   // Online Tools
@@ -858,18 +848,8 @@ export const BookmarkList = [
     folder: "Game",
   },
   {
-    name: "Tistory",
-    domain: "https://tistory.com/",
-    folder: "Game",
-  },
-  {
     name: "Bungie",
     domain: "https://www.bungie.net/ko",
-    folder: "Game",
-  },
-  {
-    name: "Titanfall 2 간접 플레이",
-    domain: "https://m.blog.naver.com/urban14/220944772506",
     folder: "Game",
   },
   {
@@ -913,7 +893,7 @@ export const BookmarkList = [
     folder: "Game",
   },
   {
-    name: "Most Popular PC Games | Global | Newzoo",
+    name: "Most Popular PC Games | Newzoo",
     domain: "https://newzoo.com/insights/rankings/top-20-pc-games/",
     folder: "Game",
   },

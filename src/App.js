@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 // colors
 import ColorFolder from "./styles/colors";
+import Variable from "./data/Variables";
 
 // components
 import Headers from "./screens/Headers";
@@ -29,7 +30,7 @@ function App() {
       </header> */}
       <Container>
         <Header1>Bookmarks</Header1>
-        <Text>v0.1.2-rc</Text>
+        <Text>{Variable.ver}</Text>
       </Container>
       <Header3 color={ColorFolder.sky}>
         <div>

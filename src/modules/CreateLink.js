@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-// import "../styles/CreateLink.css";
-
 import ColorFolder from "../styles/colors";
 
 /** 이미지 가져와서 return */
@@ -16,7 +14,6 @@ const loadingImg = await getImage("Loading");
 function CreateLink({ name, domain, icon, size = 64 }) {
   const [img, setImg] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  // const size = 30;
 
   useEffect(() => {
     /** 이미지 불러오는 과정*/
@@ -36,12 +33,9 @@ function CreateLink({ name, domain, icon, size = 64 }) {
 
   // 로딩 중일 때 표시할 내용
   if (isLoading) {
-    // return <div>Loading...</div>;
-    // return <div>{name}</div>;
     return (
-      <Container color={ColorFolder.white}>
+      <ContainerLink color={ColorFolder.white}>
         <div className="container">
-          {/* img가 null이 아닐 때만 렌더링 */}
           <StyledLink color={ColorFolder.white}>
             <a href={domain} target="_blank" rel="noreferrer">
               <img
@@ -55,12 +49,12 @@ function CreateLink({ name, domain, icon, size = 64 }) {
             <p className="icon_name">{name}</p>
           </StyledLink>
         </div>
-      </Container>
+      </ContainerLink>
     );
   }
 
   return (
-    <Container color={ColorFolder.gray}>
+    <ContainerLink color={ColorFolder.gray}>
       <div>
         <StyledLink>
           <a
@@ -83,11 +77,11 @@ function CreateLink({ name, domain, icon, size = 64 }) {
           </a>
         </StyledLink>
       </div>
-    </Container>
+    </ContainerLink>
   );
 }
 
-const Container = styled.div`
+const ContainerLink = styled.div`
   /* text-decoration: none; */
   width: 160px;
   height: auto;
