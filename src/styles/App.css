@@ -1,7 +1,13 @@
 @import 'colors.css';
 
 .App {
+  text-decoration: none;
   text-align: center;
+  background-color: var(--black);
+}
+
+.text {
+  color: var(--white);
 }
 
 .App-header {

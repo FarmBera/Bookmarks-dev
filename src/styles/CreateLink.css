@@ -1,7 +1,12 @@
 @import 'colors.css';
 
 .container {
-  width: 150;
-  height: 100;
+  width: 150px;
+  height: 20%;
   border: 1px solid var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
 }

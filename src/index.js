@@ -3,14 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./styles/index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Bookmark from "./screens/Bookmarks";
+import Bookmark from "./screens/Bookmark";
 import Bookmark_test from "./modules/CreateLink";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Bookmark />
+    <App />
   </React.StrictMode>
 );
 

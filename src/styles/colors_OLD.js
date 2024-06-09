@@ -1,5 +1,4 @@
-const ColorFolder = {
-  "": "#d9dae2", // 기본값
+const Colors = {
   white: "#d9dae2",
   gray: "#63676b",
   darkblack: "#141a25",
@@ -16,4 +15,19 @@ const ColorFolder = {
   purple: "#8777e2",
 };
 
-export default ColorFolder;
+export const {
+  white,
+  gray,
+  darkblack,
+  black,
+  pink,
+  red,
+  orange,
+  yellow,
+  green,
+  darkgreen,
+  cyan,
+  sky,
+  blue,
+  purple,
+} = Colors;
