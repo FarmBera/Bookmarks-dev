@@ -320,18 +320,6 @@ export const BookmarkList = [
   },
   {
     // TODO: Search Icon
-    name: "NAVER Mail",
-    domain: "https://mail.naver.com/",
-    folder: "Utility",
-  },
-  {
-    // TODO: Search Icon
-    name: "NAVER Cloud",
-    domain: "https://cloud.naver.com/#/my",
-    folder: "Utility",
-  },
-  {
-    // TODO: Search Icon
     name: "TISTORY",
     domain: "https://www.tistory.com/",
     folder: "Utility",
