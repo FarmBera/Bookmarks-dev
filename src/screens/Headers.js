@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Sticky, StickyContainer } from "react-sticky";
+import React, { /* useEffect, */ useState } from "react";
+import { /* Sticky, */ StickyContainer } from "react-sticky";
 import styled from "styled-components";
 
 // color
@@ -30,7 +30,7 @@ const Headers = () => {
           <NavList>
             {items.map((item) => (
               <NavItem key={item.id}>
-                <a>
+                <a href="/">
                   <NavLink>{item.name}</NavLink>
                 </a>
               </NavItem>
@@ -42,10 +42,10 @@ const Headers = () => {
   );
 };
 
-const Text = styled.div`
+/* const Text = styled.div`
   text-decoration: none;
   color: ${ColorFolder.white};
-`;
+`; */
 
 const HeaderContainer = styled.header`
   position: sticky;
@@ -74,7 +74,10 @@ const NavList = styled.ul`
 const NavItem = styled.li`
   text-decoration: none;
   margin-right: 20px;
-  border: 1px solid #fff;
+
+  :hover {
+    border: 1px solid ${ColorFolder.white};
+  }
 
   &:last-child {
     margin-right: 0;

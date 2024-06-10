@@ -4,9 +4,6 @@ import styled from "styled-components";
 // css
 import "../styles/App.css";
 
-// color
-import ColorFolder from "../styles/colors.js";
-
 // Components
 import BookmarkList from "../data/BookmarkList.js";
 import CreateLink from "../modules/CreateLink";
@@ -37,10 +34,10 @@ const GridContainer = styled.div`
   gap: 10px;
 `;
 
-const Item = styled.div`
-  width: 180px; /* 너비 단위 설정 */
-  height: 7%; /* 높이 단위 설정*/
-  /* 추가적인 스타일링 (배경색, 테두리 등) */
-`;
+/* const Item = styled.div`
+  width: 180px; /* 너비 단위 설정
+  height: 7%; /* 높이 단위 설정
+  /* 추가적인 스타일링 (배경색, 테두리 등)
+`; */
 
 export default Bookmark;
