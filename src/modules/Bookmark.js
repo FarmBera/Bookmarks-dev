@@ -1,19 +1,26 @@
-import { React } from "react";
+import { React, useState, useEffect } from "react";
 import styled from "styled-components";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 
 // css
 import "../styles/App.css";
 
 // Components
-import BookmarkList from "../data/BookmarkList.js";
+// import BookmarkList from "../data/BookmarkList.js";
 import CreateLink from "../modules/CreateLink";
 
-function Bookmark() {
+function Bookmark({ filterBmks }) {
+  const [bmks, setBmks] = useState([]);
+
+  useEffect(() => {
+    setBmks(filterBmks);
+  }, [filterBmks]);
+
   return (
     <div className="App">
       <header className="App-header">
         <GridContainer>
-          {BookmarkList.map((link, index) => (
+          {bmks.map((link, index) => (
             <CreateLink
               key={index}
               name={link.name}

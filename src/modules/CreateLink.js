@@ -11,9 +11,9 @@ async function getImage(imgName) {
 
 const loadingImg = await getImage("Loading");
 
-function CreateLink({ name, domain, icon, size = 64 }) {
+function CreateLink({ name, domain, icon, size = 64, loadingState }) {
   const [img, setImg] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(loadingState);
 
   useEffect(() => {
     /** 이미지 불러오는 과정*/
