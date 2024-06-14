@@ -2,7 +2,7 @@
 
 ## Alpha ver
 
-### v0.2.2-closed-alpha
+### v0.2.2.3-closed-alpha
 
 - 배포 시, 빈 페이지 오류 수정
 

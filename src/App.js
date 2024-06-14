@@ -53,7 +53,7 @@ function App() {
             ticking={false}
             timezone={"Asia/Seoul"}
           />
-          &nbsp;&nbsp;
+          {"  "}
           <Clock format={"HH:mm:ss"} ticking={true} timezone={"Asia/Seoul"} />
         </div>
       </Header3>
