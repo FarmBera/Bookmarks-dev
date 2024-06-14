@@ -11,9 +11,9 @@ async function getImage(imgName) {
 
 const loadingImg = await getImage("Loading");
 
-function CreateLink({ name, domain, icon, size = 64, loadingState }) {
+function CreateLink({ name, domain, icon, size = 64, selectedFolder }) {
   const [img, setImg] = useState(null);
-  const [isLoading, setIsLoading] = useState(loadingState);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     /** 이미지 불러오는 과정*/
@@ -29,7 +29,7 @@ function CreateLink({ name, domain, icon, size = 64, loadingState }) {
     }
     if (icon) fetchImage(icon);
     else fetchImage(name);
-  }, []);
+  }, [icon, name, selectedFolder]);
 
   // 로딩 중일 때 표시할 내용
   if (isLoading) {

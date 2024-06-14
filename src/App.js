@@ -62,7 +62,12 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Bookmark filterBmks={filteredBookmarks} />}
+          element={
+            <Bookmark
+              filterBmks={filteredBookmarks}
+              selectedFolder={selectedFolder}
+            />
+          }
         ></Route>
 
         <Route path="*" element={<NotFound />}></Route>

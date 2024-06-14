@@ -9,7 +9,7 @@ import "../styles/App.css";
 // import BookmarkList from "../data/BookmarkList.js";
 import CreateLink from "../modules/CreateLink";
 
-function Bookmark({ filterBmks }) {
+function Bookmark({ filterBmks, selectedFolder }) {
   const [bmks, setBmks] = useState([]);
 
   useEffect(() => {
@@ -26,6 +26,7 @@ function Bookmark({ filterBmks }) {
               name={link.name}
               domain={link.domain}
               icon={link.icon}
+              selectedFolder={selectedFolder}
             />
           ))}
         </GridContainer>
