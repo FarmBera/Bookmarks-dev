@@ -11,12 +11,12 @@ async function getImage(imgName) {
 
 const loadingImg = await getImage("Loading");
 
-function CreateLink({ name, domain, icon, size = 64 }) {
+function CreateLink({ name, domain, icon, size = 64, selectedFolder }) {
   const [img, setImg] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
+  /** 이미지 불러오는 과정*/
   useEffect(() => {
-    /** 이미지 불러오는 과정*/
     async function fetchImage(name) {
       try {
         const imageData = await getImage(name);
@@ -29,7 +29,7 @@ function CreateLink({ name, domain, icon, size = 64 }) {
     }
     if (icon) fetchImage(icon);
     else fetchImage(name);
-  }, []);
+  }, [icon, name, selectedFolder]);
 
   // 로딩 중일 때 표시할 내용
   if (isLoading) {
@@ -53,6 +53,7 @@ function CreateLink({ name, domain, icon, size = 64 }) {
     );
   }
 
+  // 로딩 완료 시 표시
   return (
     <ContainerLink color={ColorFolder.gray}>
       <div>

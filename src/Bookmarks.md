@@ -329,7 +329,7 @@ folder: ""
 },
 {
 
-name: "일단 저장", 
+name: "에이펙스 레전드 튕김 해결", 
 domain: "https://m.blog.naver.com/PostView.naver?isHttpsRediect=true&blogId=eternalguard&logNo=221485780471",
 folder: ""
 },

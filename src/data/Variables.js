@@ -1,5 +1,5 @@
 const Variable = {
-  ver: "v0.1.2-rc",
+  ver: "v0.2.1-closed-alpha",
 };
 
 export default Variable;

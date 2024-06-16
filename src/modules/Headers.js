@@ -1,6 +1,7 @@
 import React, { /* useEffect, */ useState } from "react";
 import { /* Sticky, */ StickyContainer } from "react-sticky";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // color
 import ColorFolder from "../styles/colors";
@@ -8,7 +9,7 @@ import ColorFolder from "../styles/colors";
 // components
 import BookmarkList from "../data/BookmarkList";
 
-const Headers = () => {
+function Headers({ handleClick }) {
   const [items, setItems] = useState(() => {
     // BookmarkList에 있는 아이템들로 초기 상태 설정
     const initialItems = BookmarkList.reduce((acc, curr) => {
@@ -28,11 +29,12 @@ const Headers = () => {
       <HeaderContainer>
         <Nav>
           <NavList>
+            <Link onClick={() => handleClick("All")}>All</Link>
             {items.map((item) => (
               <NavItem key={item.id}>
-                <a href="/">
+                <Link onClick={() => handleClick(item.name)}>
                   <NavLink>{item.name}</NavLink>
-                </a>
+                </Link>
               </NavItem>
             ))}
           </NavList>
@@ -40,7 +42,7 @@ const Headers = () => {
       </HeaderContainer>
     </StickyContainer>
   );
-};
+}
 
 /* const Text = styled.div`
   text-decoration: none;
