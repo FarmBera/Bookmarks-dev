@@ -1,6 +1,6 @@
-import { React, useState } from "react";
-import styled from "styled-components";
+import { React, useEffect, useState } from "react";
 import { Routes, Route, Link /* useNavigate */ } from "react-router-dom";
+import styled from "styled-components";
 import Clock from "react-live-clock";
 // import "./styles/App.css";
 
@@ -17,7 +17,7 @@ import NotFound from "./modules/NotFound";
 
 function App() {
   const [selectedFolder, setSelectedFolder] = useState("All");
-  // const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   // const navigate = useNavigate();
 
@@ -26,10 +26,27 @@ function App() {
     // navigate("/");
   };
 
-  const filteredBookmarks =
-    selectedFolder === "All"
-      ? BookmarkList
-      : BookmarkList.filter((bookmark) => bookmark.folder === selectedFolder);
+  useEffect(() => {
+    const filteredByFolder =
+      selectedFolder === "All"
+        ? BookmarkList
+        : BookmarkList.filter((bookmark) => bookmark.folder === selectedFolder);
+
+    const filteredBySearch =
+      searchTerm === ""
+        ? filteredByFolder
+        : filteredByFolder.filter((bookmark) =>
+            bookmark.name.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+
+    setFilteredBookmarks(filteredBySearch);
+  }, [selectedFolder, searchTerm]);
+
+  const [filteredBookmarks, setFilteredBookmarks] = useState(BookmarkList);
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
   return (
     <AppContainer>
@@ -54,7 +71,10 @@ function App() {
           </div>
         </Header3>
 
-        <SearchBar />
+        <SearchBar
+          searchTerm={searchTerm}
+          handleSearchChange={handleSearchChange}
+        />
         <Routes>
           <Route
             path="/"

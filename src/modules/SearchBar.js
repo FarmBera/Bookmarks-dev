@@ -4,13 +4,15 @@ import styled from "styled-components";
 // color
 import ColorFolder from "../styles/colors";
 
-const SearchBar = () => {
+const SearchBar = ({ searchTerm, handleSearchChange }) => {
   return (
     <Container>
       <input
         className="inputbox"
         type="text"
         placeholder="Search Bookmarks"
+        value={searchTerm}
+        onChange={handleSearchChange}
         // width={100}
         size={30}
       ></input>
