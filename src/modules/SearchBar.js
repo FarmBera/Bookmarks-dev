@@ -1,5 +1,4 @@
 import React, { /* useEffect, */ useState } from "react";
-import { /* Sticky, */ StickyContainer } from "react-sticky";
 import styled from "styled-components";
 
 // color
@@ -8,7 +7,6 @@ import ColorFolder from "../styles/colors";
 const SearchBar = () => {
   return (
     <Container>
-      {/* <InputBox> */}
       <input
         className="inputbox"
         type="text"
@@ -16,8 +14,7 @@ const SearchBar = () => {
         // width={100}
         size={30}
       ></input>
-      {/* </InputBox> */}
-      <button type="submit">Search!</button>
+      <button type="submit">Search</button>
     </Container>
   );
 };
@@ -37,13 +34,28 @@ const Container = styled.header`
   padding-bottom: ${heightVal + 10}px;
 
   input {
-    width: 300px;
-    height: ${heightVal}px;
+    transition: 10ms;
+    width: 220px;
+    height: ${heightVal + 5}px;
+    background-color: ${ColorFolder.gray};
+    color: ${ColorFolder.white};
+    font-size: 20px;
+    border: 0;
+    margin-top: 5px;
+  }
+  input:hover {
+    transition: 10ms;
+    background-color: ${ColorFolder.cyan};
   }
 
   button {
     width: 70px;
+    margin-left: 10px;
     height: ${heightVal + 6}px;
+    border: 0;
+  }
+  button:hover {
+    background-color: ${ColorFolder.cyan};
   }
 `;
 

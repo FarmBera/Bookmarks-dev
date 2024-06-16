@@ -32,13 +32,9 @@ function Headers({ handleClick }) {
             <Link onClick={() => handleClick("All")}>All</Link>
             {items.map((item) => (
               <NavItem key={item.id}>
-                <Link
-                  // to={`/${item.name}`}
-                  onClick={() => handleClick(item.name)}
-                >
+                <Link onClick={() => handleClick(item.name)}>
                   <NavLink>{item.name}</NavLink>
                 </Link>
-                {/* <a href="/"></a> */}
               </NavItem>
             ))}
           </NavList>

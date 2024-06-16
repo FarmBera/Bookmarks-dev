@@ -15,8 +15,8 @@ function CreateLink({ name, domain, icon, size = 64, selectedFolder }) {
   const [img, setImg] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
+  /** 이미지 불러오는 과정*/
   useEffect(() => {
-    /** 이미지 불러오는 과정*/
     async function fetchImage(name) {
       try {
         const imageData = await getImage(name);
@@ -53,6 +53,7 @@ function CreateLink({ name, domain, icon, size = 64, selectedFolder }) {
     );
   }
 
+  // 로딩 완료 시 표시
   return (
     <ContainerLink color={ColorFolder.gray}>
       <div>

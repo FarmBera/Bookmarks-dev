@@ -1,12 +1,7 @@
 import { React, useState } from "react";
 import styled from "styled-components";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  useNavigate,
-} from "react-router-dom";
+import { Routes, Route, Link /* useNavigate */ } from "react-router-dom";
+import Clock from "react-live-clock";
 // import "./styles/App.css";
 
 // colors
@@ -17,14 +12,14 @@ import BookmarkList from "./data/BookmarkList";
 // components
 import Headers from "./modules/Headers";
 import Bookmark from "./modules/Bookmark";
-import Clock from "react-live-clock";
 import SearchBar from "./modules/SearchBar";
 import NotFound from "./modules/NotFound";
 
 function App() {
   const [selectedFolder, setSelectedFolder] = useState("All");
+  // const [searchTerm, setSearchTerm] = useState("");
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleFolderClick = (folderName) => {
     setSelectedFolder(folderName);
@@ -37,44 +32,52 @@ function App() {
       : BookmarkList.filter((bookmark) => bookmark.folder === selectedFolder);
 
   return (
-    <div className="App">
-      <Headers handleClick={handleFolderClick} />
+    <AppContainer>
+      <div className="App">
+        <Headers handleClick={handleFolderClick} />
 
-      <Container>
-        <Link onClick={() => handleFolderClick("All")}>
-          <Header1>Bookmarks</Header1>
-        </Link>
-        <Text>{Variable.ver}</Text>
-      </Container>
-      <Header3 color={ColorFolder.sky}>
-        <div>
-          <Clock
-            format={"ddd MMM DD"}
-            ticking={false}
-            timezone={"Asia/Seoul"}
-          />
-          {"  "}
-          <Clock format={"HH:mm:ss"} ticking={true} timezone={"Asia/Seoul"} />
-        </div>
-      </Header3>
-
-      <SearchBar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Bookmark
-              filterBmks={filteredBookmarks}
-              selectedFolder={selectedFolder}
+        <Container>
+          <Link onClick={() => handleFolderClick("All")}>
+            <Header1>Bookmarks</Header1>
+          </Link>
+          <Text>{Variable.ver}</Text>
+        </Container>
+        <Header3 color={ColorFolder.sky}>
+          <div>
+            <Clock
+              format={"ddd MMM DD"}
+              ticking={false}
+              timezone={"Asia/Seoul"}
             />
-          }
-        ></Route>
+            {"  "}
+            <Clock format={"HH:mm:ss"} ticking={true} timezone={"Asia/Seoul"} />
+          </div>
+        </Header3>
 
-        <Route path="*" element={<NotFound />}></Route>
-      </Routes>
-    </div>
+        <SearchBar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Bookmark
+                filterBmks={filteredBookmarks}
+                selectedFolder={selectedFolder}
+              />
+            }
+          ></Route>
+
+          <Route path="*" element={<NotFound />}></Route>
+        </Routes>
+      </div>
+    </AppContainer>
   );
 }
+
+const AppContainer = styled.div`
+  text-decoration: none;
+  text-align: center;
+  background-color: ${ColorFolder.black};
+`;
 
 const Container = styled.h3`
   display: flex;
@@ -96,6 +99,10 @@ const Header1 = styled.h3`
   margin-top: ${HeaderMargin}${unit};
   margin-bottom: ${HeaderMargin}${unit};
   color: ${(props) => props.color || ColorFolder.white};
+
+  :hover {
+    color: ${ColorFolder.cyan};
+  }
 `;
 
 const Header3 = styled.div`

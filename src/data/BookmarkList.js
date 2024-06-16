@@ -2,62 +2,67 @@ export const BookmarkList = [
   {
     name: "Discord",
     domain: "https://discord.com/channels/@me",
-    folder: "",
+    folder: "Community",
   },
   {
     name: "Tidal",
     domain: "https://listen.tidal.com/",
-    folder: "",
+    folder: "Utility",
   },
   {
     name: "Gmail",
     domain: "https://mail.google.com/mail/u/0/",
-    folder: "",
+    folder: "Online Tools",
   },
   {
     name: "NAVER Mail",
     domain: "https://mail.naver.com/",
-    folder: "",
+    folder: "Online Tools",
   },
   {
     name: "Google Calendar",
     domain: "https://calendar.google.com/calendar/u/0/r",
-    folder: "",
+    folder: "Online Tools",
   },
   {
     name: "YouTube Studio",
     domain: "https://studio.youtube.com/",
-    folder: "",
+    folder: "Online Tools",
   },
   {
     name: "iCloud",
     domain: "https://www.icloud.com/",
-    folder: "",
+    folder: "Online Tools",
   },
   {
     name: "NAVER MYBOX",
     domain: "https://cloud.naver.com/#/my",
-    folder: "",
+    folder: "Online Tools",
   },
   {
     name: "Apple Music",
     domain: "https://music.apple.com/kr/browse",
-    folder: "",
+    folder: "Online Tools",
   },
   {
     name: "Brave",
     domain: "https://brave.com/download/",
-    folder: "",
+    folder: "Online Tools",
   },
   {
     name: "OBS Studio",
     domain: "https://obsproject.com/download",
-    folder: "",
+    folder: "Online Tools",
   },
   {
     name: "PUBG",
     domain: "https://pubg.game.daum.net/pubg/index.daum",
-    folder: "",
+    folder: "Game",
+  },
+  {
+    name: "Voicemeeter",
+    domain: "https://vb-audio.com/Voicemeeter/potato.htm",
+    folder: "Utility",
   },
   // GPTs
   {
@@ -98,31 +103,26 @@ export const BookmarkList = [
     folder: "Search Engine",
   },
   {
-    // TODO: Search Icon
     name: "Kagi Search",
     domain: "https://kagi.com/",
     folder: "Search Engine",
   },
   {
-    // TODO: Search Icon (square)
     name: "Bing",
     domain: "https://www.bing.com/",
     folder: "Search Engine",
   },
   {
-    // TODO: Search Icon
     name: "Yahoo",
     domain: "https://www.yahoo.com/",
     folder: "Search Engine",
   },
   {
-    // TODO: Search Icon
     name: "Yandex",
     domain: "https://yandex.com/",
     folder: "Search Engine",
   },
   {
-    // TODO: Search Icon
     name: "Danawa",
     domain: "http://www.danawa.com/",
     folder: "Search Engine",
@@ -149,26 +149,22 @@ export const BookmarkList = [
     folder: "Community",
   },
   {
-    // TODO: Search Icon
     name: "크집사 - Cafe",
     icon: "Daum Cafe",
     domain: "https://cafe.daum.net/claireluvcat",
     folder: "Community",
   },
   {
-    // TODO: Search Icon
     name: "Twitter",
     domain: "https://twitter.com/home",
     folder: "Community",
   },
   {
-    // TODO: Search Icon
     name: "N Cafe",
     domain: "https://section.cafe.naver.com/ca-fe/",
     folder: "Community",
   },
   {
-    // TODO: Search Icon
     name: "Clien",
     domain: "https://www.clien.net/service/",
     folder: "Community",
@@ -179,159 +175,123 @@ export const BookmarkList = [
     folder: "Community",
   },
   {
-    // TODO: Search Icon
     name: "ArtStation",
     domain: "https://www.artstation.com/?sort_by=community",
     folder: "Community",
   },
   {
-    // TODO: Search Icon
     name: "Facebook",
     domain: "https://www.facebook.com/",
     folder: "Community",
   },
   {
-    // TODO: Search Icon
-    name: "ColorScale",
-    domain: "https://colorscale.co.kr/",
-    folder: "Community",
-  },
-  {
-    // TODO: Search Icon (incen)
     name: "DG Inven",
     domain: "http://m.inven.co.kr/destinyguardians/",
     folder: "Community",
   },
   {
-    // TODO: Search Icon
     name: "Gigglehd",
     domain: "https://gigglehd.com/gg/",
     folder: "Community",
   },
   {
-    // TODO: Search Icon
     name: "Meeco",
     domain: "https://meeco.kr/index.php?act=dispMemberLoginForm",
     folder: "Community",
   },
   {
-    // TODO: Search Icon
     name: "coolenjoy",
     domain: "https://coolenjoy.net/",
     folder: "Community",
   },
   {
-    // TODO: Search Icon
-    name: "dcinside",
-    domain: "https://m.dcinside.com/",
-    folder: "Community",
-  },
-  {
-    // TODO: Search Icon
     name: "Deviantart",
     domain: "https://www.deviantart.com/",
     folder: "Community",
   },
   {
-    // TODO: Search Icon
     name: "Remiz Space",
     domain: "https://remiz.co.kr/index.php",
     folder: "Community",
   },
   {
-    // TODO: Search Icon
     name: "Home | BAND",
     domain: "https://band.us/",
     folder: "Community",
   },
   // Utility
   {
-    // TODO: Search Icon
     name: "HancomWeb",
     domain: "https://space.malangmalang.com/drive",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "MSOfficeWeb",
     domain: "https://www.office.com/?flight=unauthrefresh&auth=1",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "HTMLColorPicker",
     domain: "https://www.w3schools.com/colors/colors_picker.asp",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "Kakao Map",
     domain: "https://map.kakao.com/",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "vClock",
     domain: "https://vclock.com/",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "NAVER Map",
     domain:
       "https://map.naver.com/v5/?c=14149525.3667629,448960.7664716,15,0,0,0,dh",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "DeepL",
     domain: "https://www.deepl.com/translator",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "Bitly",
     domain: "https://app.bitly.com/",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "Downdetector",
     domain: "https://downdetector.com/",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "Cymatics.fm",
     domain: "https://cymatics.fm/",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "AudioJungle",
     domain: "https://audiojungle.net/",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "Pinterest",
     domain: "https://www.pinterest.co.kr/",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "TISTORY",
     domain: "https://www.tistory.com/",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "링키드",
     domain: "https://linkid.pw/myParty",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "SoundCloud",
     domain: "https://soundcloud.com/",
     folder: "Utility",
@@ -342,89 +302,75 @@ export const BookmarkList = [
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "Apple Silicon Games",
     domain: "https://applesilicongames.com/",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "KeyTest",
     domain:
       "https://www.google.com/search?client=safari&rls=en&q=eytest+online&ie=UTF-8&oe=UTF-8&safari_group=9",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "Splice",
     domain: "https://splice.com/home",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "UserBenchmark",
     domain: "https://www.userbenchmark.com/",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "TuneMyMusic",
     domain: "https://www.tunemymusic.com/ko/",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "MEGA",
     domain: "https://mega.nz/fm/NeY3FYxC",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "Mapianist",
     domain: "https://m.mapianist.com/",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "SiLeNtWaLkEr",
     domain: "https://destinyemblemwallpapers.com/destiny2/desktp/emblems",
     folder: "Utility",
   },
   {
-    // TODO: Search Icon
     name: "네이버 메모",
     domain: "https://m.memo.naver.com/",
     folder: "Utility",
   },
   // Entertainment
   {
-    // TODO: Search Icon
     name: "YouTube",
     domain: "https://www.youtube.com/",
     folder: "Entertainment",
   },
   {
-    // TODO: Search Icon
     name: "크집사 즐겨찾기",
     domain:
       "https://youtube.com/playlist?list=PL5xWjgTr1g8j4fbHSnzxdWCP-pHtE6mKg&si=lmDb63dcJ39Pyo2R",
     folder: "Entertainment",
   },
   {
-    // TODO: Search Icon
     name: "Claire Luvcat",
     domain: "https://www.youtube.com/@claire_luvcat",
     folder: "Entertainment",
   },
   {
-    // TODO: Search Icon
     name: "크집사빨간맛",
     domain: "https://www.youtube.com/@claire_luvhot/streams",
     folder: "Entertainment",
   },
   {
-    // TODO: Search Icon
-    name: "D Live",
+    name: "Dokdo Live",
     domain: "http://www.dokdo.re.kr:11081/popup/home/popup/dokdo_lie.html",
     folder: "Entertainment",
   },
@@ -434,24 +380,21 @@ export const BookmarkList = [
     folder: "Entertainment",
   },
   {
-    // TODO: Search Icon
     name: "TETR.IO",
     domain: "https://tetr.io/",
     folder: "Entertainment",
   },
   {
-    // TODO: Search Icon
-    name: "N Webtoon",
+    name: "NAVER Webtoon",
     domain: "https://m.comic.naver.com/index.nhn",
     folder: "Entertainment",
   },
   {
-    name: "netfilx",
+    name: "Netfilx",
     domain: "https://www.netflix.com/kr/",
     folder: "Entertainment",
   },
   {
-    // TODO: Search Icon
     name: "Watcha",
     domain: "https://play.watcha.net/",
     folder: "Entertainment",
@@ -878,7 +821,7 @@ export const BookmarkList = [
   {
     name: "Tetris",
     domain: "https://tetris.com/play-tetris/",
-    folder: "Game",
+    folder: "Entertainment",
   },
   {
     name: "Most Popular PC Games | Newzoo",

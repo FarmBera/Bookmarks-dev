@@ -1,9 +1,8 @@
 import { React, useState, useEffect } from "react";
 import styled from "styled-components";
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 
-// css
-import "../styles/App.css";
+// color folder
+import ColorFolder from "../styles/colors";
 
 // Components
 // import BookmarkList from "../data/BookmarkList.js";
@@ -17,23 +16,48 @@ function Bookmark({ filterBmks, selectedFolder }) {
   }, [filterBmks]);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <GridContainer>
-          {bmks.map((link, index) => (
-            <CreateLink
-              key={index}
-              name={link.name}
-              domain={link.domain}
-              icon={link.icon}
-              selectedFolder={selectedFolder}
-            />
-          ))}
-        </GridContainer>
-      </header>
-    </div>
+    <BmkContaier>
+      <div className="App">
+        <header className="App-header">
+          <GridContainer>
+            {bmks.map((link, index) => (
+              <CreateLink
+                key={index}
+                name={link.name}
+                domain={link.domain}
+                icon={link.icon}
+                selectedFolder={selectedFolder}
+              />
+            ))}
+          </GridContainer>
+        </header>
+      </div>
+    </BmkContaier>
   );
 }
+
+const BmkContaier = styled.div`
+  .App {
+    text-decoration: none;
+    text-align: center;
+    background-color: ${ColorFolder.black};
+  }
+
+  .text {
+    color: ${ColorFolder.white};
+  }
+
+  .App-header {
+    background-color: ${ColorFolder.black};
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+`;
 
 const GridContainer = styled.div`
   text-decoration: none;
