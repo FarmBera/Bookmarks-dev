@@ -1,5 +1,10 @@
 export const BookmarkList = [
   {
+    name: "Parsec",
+    domain: "https://parsec.app/downloads",
+    folder: "Utility",
+  },
+  {
     name: "Discord",
     domain: "https://discord.com/channels/@me",
     folder: "Community",
@@ -123,11 +128,6 @@ export const BookmarkList = [
     folder: "Search Engine",
   },
   {
-    name: "Danawa",
-    domain: "http://www.danawa.com/",
-    folder: "Search Engine",
-  },
-  {
     name: "Google Trends",
     domain: "https://trends.google.co.kr/trends/?geo=KR",
     folder: "Search Engine",
@@ -241,11 +241,6 @@ export const BookmarkList = [
     folder: "Utility",
   },
   {
-    name: "vClock",
-    domain: "https://vclock.com/",
-    folder: "Utility",
-  },
-  {
     name: "NAVER Map",
     domain:
       "https://map.naver.com/v5/?c=14149525.3667629,448960.7664716,15,0,0,0,dh",
@@ -338,11 +333,6 @@ export const BookmarkList = [
     folder: "Utility",
   },
   {
-    name: "SiLeNtWaLkEr",
-    domain: "https://destinyemblemwallpapers.com/destiny2/desktp/emblems",
-    folder: "Utility",
-  },
-  {
     name: "네이버 메모",
     domain: "https://m.memo.naver.com/",
     folder: "Utility",
@@ -367,16 +357,6 @@ export const BookmarkList = [
   {
     name: "크집사빨간맛",
     domain: "https://www.youtube.com/@claire_luvhot/streams",
-    folder: "Entertainment",
-  },
-  {
-    name: "Dokdo Live",
-    domain: "http://www.dokdo.re.kr:11081/popup/home/popup/dokdo_lie.html",
-    folder: "Entertainment",
-  },
-  {
-    name: "Instagram",
-    domain: "https://www.instagram.com/",
     folder: "Entertainment",
   },
   {
@@ -528,6 +508,11 @@ export const BookmarkList = [
   },
   // Shopping
   {
+    name: "Danawa",
+    domain: "http://www.danawa.com/",
+    folder: "Shopping",
+  },
+  {
     name: "Compuzone",
     domain: "http://www.compuzone.co.kr/main/main.htm",
     folder: "Shopping",
@@ -535,28 +520,6 @@ export const BookmarkList = [
   {
     name: "Oversystem",
     domain: "https://oversystem.co.kr/",
-    folder: "Shopping",
-  },
-  {
-    name: "Danawa",
-    domain: "http://www.danawa.com/",
-    folder: "Shopping",
-  },
-  {
-    name: "Compuzone",
-    domain: "https://www.compuzone.co.kr/main/main.htm",
-    folder: "Shopping",
-  },
-  {
-    name: "MBVGA Benchmark List",
-    domain:
-      "https://www.notebookcheck.net/Mobile-Graphics-Cards-enchmark-List.844.0.html",
-    folder: "Shopping",
-  },
-  {
-    name: "Bottleneck Calculator",
-    domain:
-      "https://pc-builds.com/calculator/Core_i7-10700K/GeForce_TX_3080/0Yd174/",
     folder: "Shopping",
   },
   {
@@ -650,11 +613,6 @@ export const BookmarkList = [
   {
     name: "Clicking Speed Test",
     domain: "https://cookie.riimu.net/speed/",
-    folder: "Online Tools",
-  },
-  {
-    name: "Bitly",
-    domain: "https://bitly.com/",
     folder: "Online Tools",
   },
   {

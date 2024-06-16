@@ -2,6 +2,14 @@
 
 ## Alpha ver
 
+### v0.2.5-dev1
+
+- 중복 북마크 제거
+- 약간의 Headers 디자인
+- 재미있는 샘플 애니메이션 추가
+  - ThreeDotLoader
+  - TwistingSquares: 위치 조정 필요
+
 ### v0.2.4-rc
 
 - 검색 기능 구현 완료

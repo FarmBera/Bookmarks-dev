@@ -15,6 +15,10 @@ import Bookmark from "./modules/Bookmark";
 import SearchBar from "./modules/SearchBar";
 import NotFound from "./modules/NotFound";
 
+// styles
+import ThreeDotLoader from "./styles/ThreeDotLoader";
+import TwistingSquares from "./styles/TwistingSquares";
+
 function App() {
   const [selectedFolder, setSelectedFolder] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
@@ -70,6 +74,9 @@ function App() {
             <Clock format={"HH:mm:ss"} ticking={true} timezone={"Asia/Seoul"} />
           </div>
         </Header3>
+
+        {/* <ThreeDotLoader /> */}
+        {/* <TwistingSquares /> */}
 
         <SearchBar
           searchTerm={searchTerm}

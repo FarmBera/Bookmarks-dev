@@ -29,7 +29,6 @@ function Headers({ handleClick }) {
       <HeaderContainer>
         <Nav>
           <NavList>
-            <Link onClick={() => handleClick("All")}>All</Link>
             {items.map((item) => (
               <NavItem key={item.id}>
                 <Link onClick={() => handleClick(item.name)}>
@@ -77,12 +76,53 @@ const NavItem = styled.li`
   text-decoration: none;
   margin-right: 20px;
 
-  :hover {
-    border: 1px solid ${ColorFolder.white};
+  ::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    color: ${ColorFolder.black};
   }
 
-  &:last-child {
-    margin-right: 0;
+  :hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    /* color: ${ColorFolder.black}; */
+  }
+
+  ::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: ${ColorFolder.darkgreen};
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+
+  position: relative;
+  /* font-size: 5rem; */
+
+  html {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+
+  body {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+  }
+
+  @media (orientation: landscape) {
+    body {
+      grid-auto-flow: column;
+    }
   }
 `;
 
