@@ -48,6 +48,7 @@ function App() {
 
   const handleSearchChange = (event) => setSearchTerm(event.target.value); //검색창 입력 시
   const handleClearSearch = () => setSearchTerm(""); // 검색창 초기화
+  // 북마크 클릭하면 최근 항목에 추가
   const handleBmkClick = (bookmark) => {
     setRecent((prevVisits) => {
       const updatedVisits = [
@@ -56,7 +57,7 @@ function App() {
       ];
       return updatedVisits.slice(0, 5); // 최대 5개 기록 유지
     });
-  }; // 북마크 클릭하면 최근 항목에 추가
+  };
   const handleRecentClear = () => setRecent([]); // 최근 항목 초기화
 
   return (
@@ -159,18 +160,6 @@ const Container = styled.h3`
 const Text = styled.span`
   color: ${(props) => props.color || ColorFolder.white};
 `;
-
-// const Header1 = styled.h3`
-//   font-size: 50px;
-//   /* margin-bottom: -15px; */
-//   margin-top: ${HeaderMargin}${unit};
-//   margin-bottom: ${HeaderMargin}${unit};
-//   color: ${(props) => props.color || ColorFolder.white};
-
-//   :hover {
-//     color: ${ColorFolder.cyan};
-//   }
-// `;
 
 const Header3 = styled.div`
   font-size: 30px;

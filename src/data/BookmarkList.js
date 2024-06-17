@@ -155,8 +155,8 @@ export const BookmarkList = [
     folder: "Community",
   },
   {
-    name: "Twitter",
-    domain: "https://twitter.com/home",
+    name: "X (Twitter)",
+    domain: "https://x.com/",
     folder: "Community",
   },
   {
