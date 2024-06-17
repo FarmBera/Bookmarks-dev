@@ -8,30 +8,36 @@ import ColorFolder from "../styles/colors";
 // import BookmarkList from "../data/BookmarkList.js";
 import CreateLink from "../modules/CreateLink";
 
-function Bookmark({ filterBmks, selectedFolder }) {
+function Bookmark({ filterBmks, selectedFolder, onBmkClick }) {
   const [bmks, setBmks] = useState([]);
 
   useEffect(() => {
     setBmks(filterBmks);
   }, [filterBmks]);
 
+  const handleClick = (bmk) => {
+    onBmkClick(bmk);
+  };
+
   return (
     <BmkContaier>
       <div className="App">
-        <header className="App-header">
+        <div className="App-header">
           <GridContainer>
             {bmks.map((link, index) => (
-              <CreateLink
-                className="BTNs"
-                key={index}
-                name={link.name}
-                domain={link.domain}
-                icon={link.icon}
-                selectedFolder={selectedFolder}
-              />
+              <div key={index} onClick={() => handleClick(link)}>
+                <CreateLink
+                  className="BTNs"
+                  key={index}
+                  name={link.name}
+                  domain={link.domain}
+                  icon={link.icon}
+                  selectedFolder={selectedFolder}
+                />
+              </div>
             ))}
           </GridContainer>
-        </header>
+        </div>
       </div>
     </BmkContaier>
   );

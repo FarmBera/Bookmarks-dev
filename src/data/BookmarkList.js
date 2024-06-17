@@ -852,11 +852,7 @@ export const BookmarkList = [
     domain: "https://endic.naver.com/main.nhn",
     folder: "Edu",
   },
-  {
-    name: "Google 번역",
-    domain: "https://translate.google.com/?hl=ko&tab=TT",
-    folder: "Edu",
-  },
+
   {
     name: "Tinkercad",
     domain:

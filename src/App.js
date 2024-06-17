@@ -14,22 +14,19 @@ import Headers from "./modules/Headers";
 import Bookmark from "./modules/Bookmark";
 import SearchBar from "./modules/SearchBar";
 import NotFound from "./modules/NotFound";
+import Recent from "./modules/Recent";
 
-// styles
+// unique styles
 import ThreeDotLoader from "./styles/ThreeDotLoader";
 import TwistingSquares from "./styles/TwistingSquares";
 
 function App() {
   const [selectedFolder, setSelectedFolder] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredBookmarks, setFilteredBookmarks] = useState(BookmarkList);
+  const [filtered, setFiltered] = useState(BookmarkList);
+  const [recent, setRecent] = useState([]);
 
-  // const navigate = useNavigate();
-
-  const handleFolderClick = (folderName) => {
-    setSelectedFolder(folderName);
-    // navigate("/");
-  };
+  const handleFolderClick = (folderName) => setSelectedFolder(folderName); // 최상단 헤더 클릭 시 필터링
 
   useEffect(() => {
     const filteredByFolder =
@@ -44,16 +41,23 @@ function App() {
             bookmark.name.toLowerCase().includes(searchTerm.toLowerCase())
           );
 
-    setFilteredBookmarks(filteredBySearch);
-  }, [selectedFolder, searchTerm]);
+    setFiltered(filteredBySearch);
 
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+    // console.log(recent);
+  }, [selectedFolder, searchTerm, recent]);
 
-  const handleClearSearch = () => {
-    setSearchTerm("");
-  };
+  const handleSearchChange = (event) => setSearchTerm(event.target.value); //검색창 입력 시
+  const handleClearSearch = () => setSearchTerm(""); // 검색창 초기화
+  const handleBmkClick = (bookmark) => {
+    setRecent((prevVisits) => {
+      const updatedVisits = [
+        bookmark,
+        ...prevVisits.filter((b) => b.name !== bookmark.name),
+      ];
+      return updatedVisits.slice(0, 5); // 최대 5개 기록 유지
+    });
+  }; // 북마크 클릭하면 최근 항목에 추가
+  const handleRecentClear = () => setRecent([]); // 최근 항목 초기화
 
   return (
     <AppContainer>
@@ -90,14 +94,20 @@ function App() {
           searchTerm={searchTerm}
           handleSearchChange={handleSearchChange}
           handleClearSearch={handleClearSearch}
+          handleRecentClear={handleRecentClear}
         />
+        {/* 최근 항목 표시부분 */}
+        <Recent recentBmks={recent} filterTag={selectedFolder} />
+
+        {/* 하단 북마크 리스트 출력 */}
         <Routes>
           <Route
             path="/"
             element={
               <Bookmark
-                filterBmks={filteredBookmarks}
+                filterBmks={filtered}
                 selectedFolder={selectedFolder}
+                onBmkClick={handleBmkClick}
               />
             }
           ></Route>
