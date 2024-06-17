@@ -83,11 +83,14 @@ function CreateLink({ name, domain, icon, size = 64, selectedFolder }) {
 }
 
 const ContainerLink = styled.div`
-  /* text-decoration: none; */
   width: 160px;
   height: auto;
   padding-top: 20px;
   border: 1px solid ${(props) => props.color || ColorFolder.white};
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const StyledLink = styled.a`

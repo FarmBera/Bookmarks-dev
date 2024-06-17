@@ -22,6 +22,7 @@ function Bookmark({ filterBmks, selectedFolder }) {
           <GridContainer>
             {bmks.map((link, index) => (
               <CreateLink
+                className="BTNs"
                 key={index}
                 name={link.name}
                 domain={link.domain}
@@ -59,11 +60,25 @@ const BmkContaier = styled.div`
   }
 `;
 
+const delay = 200;
 const GridContainer = styled.div`
+  /* transition: ${delay}ms; */
   text-decoration: none;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
+
+  :hover {
+    /* transition: ${delay}ms; */
+    text-decoration: none;
+    background-color: ${ColorFolder.blue};
+    /* color: ${ColorFolder.black}; */
+    /* border: 1px solid ${ColorFolder.blue}; */
+    /* font-size: 50px; */
+  }
+
+  :active {
+  }
 `;
 
 /* const Item = styled.div`

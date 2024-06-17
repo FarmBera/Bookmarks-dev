@@ -27,17 +27,17 @@ function Headers({ handleClick }) {
   return (
     <StickyContainer>
       <HeaderContainer>
-        <Nav>
-          <NavList>
+        <div className="Nav">
+          <div className="NavList">
             {items.map((item) => (
-              <NavItem key={item.id}>
+              <div className="NavItem" key={item.id}>
                 <Link onClick={() => handleClick(item.name)}>
-                  <NavLink>{item.name}</NavLink>
+                  <div className="NavLink">{item.name}</div>
                 </Link>
-              </NavItem>
+              </div>
             ))}
-          </NavList>
-        </Nav>
+          </div>
+        </div>
       </HeaderContainer>
     </StickyContainer>
   );
@@ -55,80 +55,156 @@ const HeaderContainer = styled.header`
   background-color: #333;
   color: #fff;
   padding: 20px;
-`;
 
-const Nav = styled.nav`
-  display: flex;
-  justify-content: center;
-`;
-
-const NavList = styled.ul`
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  /* padding-right: -10px; */
-  /* border-left: 1px solid ${ColorFolder.white};
-  border-right: 3px solid ${ColorFolder.white}; */
-`;
-
-const NavItem = styled.li`
-  text-decoration: none;
-  margin-right: 20px;
-
-  ::before {
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    color: ${ColorFolder.black};
+  a {
+    text-decoration: none;
+  }
+  .NavLink {
+    color: ${ColorFolder.white};
   }
 
-  :hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    /* color: ${ColorFolder.black}; */
-  }
+  .Nav {
+    display: flex;
+    justify-content: center;
 
-  ::before {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    inset: 0 0 0 0;
-    background: ${ColorFolder.darkgreen};
-    z-index: -1;
-    transition: transform 0.3s ease;
-  }
+    .NavList {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      /* padding-right: -10px; */
+      /* border-left: 1px solid ${ColorFolder.white}; */
+      /* border-right: 3px solid ${ColorFolder.white}; */
 
-  position: relative;
-  /* font-size: 5rem; */
+      .NavItem {
+        text-decoration: none;
+        margin-right: 20px;
 
-  html {
-    block-size: 100%;
-    inline-size: 100%;
-  }
+        ::before {
+          transform: scaleX(0);
+          transform-origin: bottom right;
+          color: ${ColorFolder.black};
+        }
 
-  body {
-    min-block-size: 100%;
-    min-inline-size: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    display: grid;
-    place-content: center;
-  }
+        :hover::before {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+          /* color: ${ColorFolder.black}; */
+        }
 
-  @media (orientation: landscape) {
-    body {
-      grid-auto-flow: column;
+        ::before {
+          content: " ";
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          inset: 0 0 0 0;
+          background: ${ColorFolder.darkgreen};
+          z-index: -1;
+          transition: transform 0.3s ease;
+        }
+
+        position: relative;
+        /* font-size: 5rem; */
+
+        html {
+          block-size: 100%;
+          inline-size: 100%;
+        }
+
+        body {
+          min-block-size: 100%;
+          min-inline-size: 100%;
+          margin: 0;
+          box-sizing: border-box;
+          display: grid;
+          place-content: center;
+        }
+
+        @media (orientation: landscape) {
+          body {
+            grid-auto-flow: column;
+          }
+        }
+      }
     }
   }
 `;
 
-const NavLink = styled.a`
-  color: #fff;
-  text-decoration: none;
-`;
+// const Nav = styled.nav`
+//   display: flex;
+//   justify-content: center;
+// `;
+
+// const NavList = styled.ul`
+//   display: flex;
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+//   /* padding-right: -10px; */
+//   /* border-left: 1px solid ${ColorFolder.white};
+//   border-right: 3px solid ${ColorFolder.white}; */
+// `;
+
+// const NavItem = styled.li`
+//   text-decoration: none;
+//   margin-right: 20px;
+
+//   ::before {
+//     transform: scaleX(0);
+//     transform-origin: bottom right;
+//     color: ${ColorFolder.black};
+//   }
+
+//   :hover::before {
+//     transform: scaleX(1);
+//     transform-origin: bottom left;
+//     /* color: ${ColorFolder.black}; */
+//   }
+
+//   ::before {
+//     content: " ";
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     inset: 0 0 0 0;
+//     background: ${ColorFolder.darkgreen};
+//     z-index: -1;
+//     transition: transform 0.3s ease;
+//   }
+
+//   position: relative;
+//   /* font-size: 5rem; */
+
+//   html {
+//     block-size: 100%;
+//     inline-size: 100%;
+//   }
+
+//   body {
+//     min-block-size: 100%;
+//     min-inline-size: 100%;
+//     margin: 0;
+//     box-sizing: border-box;
+//     display: grid;
+//     place-content: center;
+//   }
+
+//   @media (orientation: landscape) {
+//     body {
+//       grid-auto-flow: column;
+//     }
+//   }
+// `;
+
+// const NavLink = styled.a`
+//   color: #fff;
+//   text-decoration: none;
+// `;
 
 export default Headers;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 // color
 import ColorFolder from "../styles/colors";
 
-const SearchBar = ({ searchTerm, handleSearchChange }) => {
+const SearchBar = ({ searchTerm, handleSearchChange, handleClearSearch }) => {
   return (
     <Container>
       <input
@@ -16,13 +16,14 @@ const SearchBar = ({ searchTerm, handleSearchChange }) => {
         // width={100}
         size={30}
       ></input>
-      <button type="submit">Search</button>
+      <button onClick={handleClearSearch}>Clear</button>
     </Container>
   );
 };
 
 // CSS variables
 const heightVal = 30;
+const delay = 200;
 
 const Container = styled.header`
   /* width:100px; */
@@ -36,28 +37,50 @@ const Container = styled.header`
   padding-bottom: ${heightVal + 10}px;
 
   input {
-    transition: 10ms;
+    transition: ${delay}ms;
     width: 220px;
+    margin-top: 5px;
     height: ${heightVal + 5}px;
-    background-color: ${ColorFolder.gray};
+    /* border: 0; */
+    border: 1px solid ${ColorFolder.white};
+    background-color: ${ColorFolder.black};
     color: ${ColorFolder.white};
     font-size: 20px;
-    border: 0;
-    margin-top: 5px;
   }
   input:hover {
-    transition: 10ms;
+    transition: ${delay}ms;
     background-color: ${ColorFolder.cyan};
+    border: 1px solid ${ColorFolder.black};
+    color: ${ColorFolder.black};
+  }
+  input:active {
+    background-color: ${ColorFolder.green};
+    color: ${ColorFolder.black};
+  }
+  input:focus {
+    border-radius: 1px;
   }
 
   button {
+    transition: ${delay}ms;
     width: 70px;
     margin-left: 10px;
-    height: ${heightVal + 6}px;
-    border: 0;
+    /* margin-top: -10px; */
+    height: ${heightVal + 10}px;
+    border: 1px solid ${ColorFolder.white};
+    background-color: ${ColorFolder.black};
+    color: ${ColorFolder.white};
   }
   button:hover {
-    background-color: ${ColorFolder.cyan};
+    transition: ${delay}ms;
+    background-color: ${ColorFolder.red};
+    color: ${ColorFolder.white};
+    font-size: 20px;
+    border: 1px solid ${ColorFolder.black};
+  }
+  button:active {
+    background-color: ${ColorFolder.green};
+    color: ${ColorFolder.black};
   }
 `;
 

@@ -22,6 +22,7 @@ import TwistingSquares from "./styles/TwistingSquares";
 function App() {
   const [selectedFolder, setSelectedFolder] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
+  const [filteredBookmarks, setFilteredBookmarks] = useState(BookmarkList);
 
   // const navigate = useNavigate();
 
@@ -46,23 +47,29 @@ function App() {
     setFilteredBookmarks(filteredBySearch);
   }, [selectedFolder, searchTerm]);
 
-  const [filteredBookmarks, setFilteredBookmarks] = useState(BookmarkList);
-
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
+  };
+
+  const handleClearSearch = () => {
+    setSearchTerm("");
   };
 
   return (
     <AppContainer>
       <div className="App">
+        {/* 최상단 헤더 부분 */}
         <Headers handleClick={handleFolderClick} />
 
+        {/* 제목 부분 */}
         <Container>
           <Link onClick={() => handleFolderClick("All")}>
-            <Header1>Bookmarks</Header1>
+            <h3>Bookmarks</h3>
           </Link>
           <Text>{Variable.ver}</Text>
         </Container>
+
+        {/* 시계 부분 */}
         <Header3 color={ColorFolder.sky}>
           <div>
             <Clock
@@ -78,9 +85,11 @@ function App() {
         {/* <ThreeDotLoader /> */}
         {/* <TwistingSquares /> */}
 
+        {/* 검색 상자 부분 */}
         <SearchBar
           searchTerm={searchTerm}
           handleSearchChange={handleSearchChange}
+          handleClearSearch={handleClearSearch}
         />
         <Routes>
           <Route
@@ -106,31 +115,52 @@ const AppContainer = styled.div`
   background-color: ${ColorFolder.black};
 `;
 
+const HeaderMargin = 10;
+const unit = "px";
 const Container = styled.h3`
   display: flex;
   bottom: 0;
   text-align: center;
   align-items: 0;
   justify-content: center;
+
+  /* Bookmarks 제목 부분 링크*/
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: ${ColorFolder.green};
+  }
+
+  /* Bookmarks 제목 부분 */
+  h3 {
+    font-size: 50px;
+    /* margin-bottom: -15px; */
+    margin-top: ${HeaderMargin}${unit};
+    margin-bottom: ${HeaderMargin}${unit};
+    color: ${(props) => props.color || ColorFolder.white};
+
+    :hover {
+      color: ${ColorFolder.cyan};
+    }
+  }
 `;
 
 const Text = styled.span`
   color: ${(props) => props.color || ColorFolder.white};
 `;
 
-const HeaderMargin = 10;
-const unit = "px";
-const Header1 = styled.h3`
-  font-size: 50px;
-  /* margin-bottom: -15px; */
-  margin-top: ${HeaderMargin}${unit};
-  margin-bottom: ${HeaderMargin}${unit};
-  color: ${(props) => props.color || ColorFolder.white};
+// const Header1 = styled.h3`
+//   font-size: 50px;
+//   /* margin-bottom: -15px; */
+//   margin-top: ${HeaderMargin}${unit};
+//   margin-bottom: ${HeaderMargin}${unit};
+//   color: ${(props) => props.color || ColorFolder.white};
 
-  :hover {
-    color: ${ColorFolder.cyan};
-  }
-`;
+//   :hover {
+//     color: ${ColorFolder.cyan};
+//   }
+// `;
 
 const Header3 = styled.div`
   font-size: 30px;
