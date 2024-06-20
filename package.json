@@ -1,5 +1,6 @@
 {
-  "name": "my-github-io",
+  "homepage": "https://farmbera.github.io/bookmarks",
+  "name": "bookmarks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
