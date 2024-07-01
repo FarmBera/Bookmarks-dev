@@ -17,8 +17,8 @@ import NotFound from "./modules/NotFound";
 import Recent from "./modules/Recent";
 
 // unique styles
-import ThreeDotLoader from "./styles/ThreeDotLoader";
-import TwistingSquares from "./styles/TwistingSquares";
+// import ThreeDotLoader from "./styles/ThreeDotLoader";
+// import TwistingSquares from "./styles/TwistingSquares";
 
 function App() {
   const [selectedFolder, setSelectedFolder] = useState("All");

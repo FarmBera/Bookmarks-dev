@@ -1,4 +1,4 @@
-import React, { /* useEffect, */ useState } from "react";
+import React /* s */ from "react";
 import { /* Sticky, */ StickyContainer } from "react-sticky";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -9,20 +9,24 @@ import ColorFolder from "../styles/colors";
 // components
 import BookmarkList from "../data/BookmarkList";
 
-function Headers({ handleClick }) {
-  const [items, setItems] = useState(() => {
-    // BookmarkList에 있는 아이템들로 초기 상태 설정
-    const initialItems = BookmarkList.reduce((acc, curr) => {
-      const item = { id: acc.length + 1, name: curr.folder };
-      if (!acc.some((item) => item.name === curr.folder)) {
-        acc.push(item);
-      }
-      return acc;
-    }, []);
+const loadItems = () => {
+  // BookmarkList에 있는 아이템들로 초기 상태 설정
+  const initialItems = BookmarkList.reduce((acc, curr) => {
+    const item = { id: acc.length + 1, name: curr.folder };
+    if (!acc.some((item) => item.name === curr.folder)) {
+      acc.push(item);
+    }
+    return acc;
+  }, []);
 
-    // 중복 제거된 배열 반환
-    return initialItems;
-  });
+  // 중복 제거된 배열 반환
+  return initialItems;
+};
+
+function Headers({ handleClick }) {
+  const items = loadItems();
+  // const [items, setItems] = useState(() => {
+  // });
 
   return (
     <StickyContainer>

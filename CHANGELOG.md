@@ -2,7 +2,11 @@
 
 ## Alpha ver
 
-### v0.3.0-dev2
+### v0.3.0-closed-alpha-test
+
+- rc version
+
+### v0.3.1-dev
 
 - 최근 방문한 항목 추가
   - 최대 5개까지 표시
@@ -11,7 +15,8 @@
 
 ToDo
 
-- ??? 쿠키로 방문기록 저장하기 ???
+- 정렬 기능 삽입 (기본 정렬, Ascending, Decending)
+- [미정] 쿠키로 방문기록 저장하기 ???
 
 ### v0.3.0-dev1
 

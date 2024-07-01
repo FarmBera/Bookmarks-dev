@@ -84,7 +84,7 @@ function CreateLink({ name, domain, icon, size = 64, selectedFolder }) {
 
 const ContainerLink = styled.div`
   width: 160px;
-  height: auto;
+  height: 140px;
   padding-top: 20px;
   border: 1px solid ${(props) => props.color || ColorFolder.white};
 
@@ -99,6 +99,7 @@ const StyledLink = styled.a`
 
   & p {
     /* text-decoration: none; */
+    margin-top: 10px;
     color: ${(props) => props.color || ColorFolder.white};
     display: flex;
     text-align: center;

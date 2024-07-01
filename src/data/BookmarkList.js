@@ -379,6 +379,21 @@ export const BookmarkList = [
     domain: "https://play.watcha.net/",
     folder: "Entertainment",
   },
+  {
+    name: "Interpark",
+    domain: "https://www.interpark.com/",
+    folder: "Entertainment",
+  },
+  {
+    name: "GamsGo",
+    domain: "https://ko.gamsgo.com/",
+    folder: "Entertainment",
+  },
+  {
+    name: "GamsGo Sub",
+    domain: "https://ko.gamsgo.com/subscription",
+    folder: "Entertainment",
+  },
   // News
   {
     name: "Apple",
@@ -661,7 +676,7 @@ export const BookmarkList = [
     folder: "Online Tools",
   },
   {
-    name: "인크루트",
+    name: "인크루트 맞춤법",
     domain: "https://www.incruit.com/tools/spell/",
     folder: "Online Tools",
   },
@@ -722,7 +737,7 @@ export const BookmarkList = [
   },
   // Game
   {
-    name: "Apex News & Update",
+    name: "Apex News",
     domain: "https://www.ea.com/ko-kr/games/apex-legends/news",
     folder: "Game",
   },
@@ -752,17 +767,17 @@ export const BookmarkList = [
     folder: "Game",
   },
   {
-    name: "시뮬라크럼은 무엇인가? / 타이탄폴 에이펙스 레전드",
+    name: "Simulacrum (apx)",
     domain: "https://polaris5023.tistory.com/173",
     folder: "Game",
   },
   {
-    name: "로바와 레버넌트의 서로에 대한 복수 이야기",
+    name: "Loba & Revenant (apx)",
     domain: "https://polaris5023.tistory.com/172",
     folder: "Game",
   },
   {
-    name: "크립토의 이야기 [에이펙스 레전드 스토리]",
+    name: "Crypto Story (apx)",
     domain: "https://polaris5023.tistory.com/174",
     folder: "Game",
   },
@@ -830,11 +845,6 @@ export const BookmarkList = [
   {
     name: "KR Dic",
     domain: "https://ko.dict.naver.com/?version=2#/main",
-    folder: "Edu",
-  },
-  {
-    name: "CodeUp",
-    domain: "https://codeup.kr/",
     folder: "Edu",
   },
   {
