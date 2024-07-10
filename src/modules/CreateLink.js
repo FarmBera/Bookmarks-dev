@@ -9,9 +9,17 @@ async function getImage(imgName) {
   return module.default;
 }
 
-const loadingImg = await getImage("Loading");
+// const loadingImg = await getImage("Loading");
 
-function CreateLink({ name, domain, icon, size = 64, selectedFolder }) {
+function CreateLink({
+  name,
+  domain,
+  icon,
+  size = 64,
+  selectedFolder,
+  loadingImg,
+  noIconImg,
+}) {
   const [img, setImg] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -22,8 +30,9 @@ function CreateLink({ name, domain, icon, size = 64, selectedFolder }) {
         const imageData = await getImage(name);
         if (imageData) setImg(imageData);
       } catch (e) {
-        const tempImage = await getImage("Noicon2");
-        setImg(tempImage);
+        // const tempImage = await getImage("Noicon2");
+        // setImg(tempImage);
+        setImg(noIconImg);
       }
       setIsLoading(false);
     }
@@ -74,7 +83,9 @@ function CreateLink({ name, domain, icon, size = 64, selectedFolder }) {
                 alt="icon"
               />
             )}
-            <p className="icon_name">{name}</p>
+            <p className="icon_name">
+              {name.length > 32 ? name.slice(0, 32) : name}
+            </p>
           </a>
         </StyledLink>
       </div>
@@ -83,8 +94,8 @@ function CreateLink({ name, domain, icon, size = 64, selectedFolder }) {
 }
 
 const ContainerLink = styled.div`
-  width: 160px;
-  height: 140px;
+  width: 140px;
+  height: 120px;
   padding-top: 20px;
   border: 1px solid ${(props) => props.color || ColorFolder.white};
 
@@ -105,7 +116,7 @@ const StyledLink = styled.a`
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 16px;
   }
 `;
 

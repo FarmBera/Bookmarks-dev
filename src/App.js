@@ -101,20 +101,11 @@ function App() {
         <Recent recentBmks={recent} filterTag={selectedFolder} />
 
         {/* 하단 북마크 리스트 출력 */}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Bookmark
-                filterBmks={filtered}
-                selectedFolder={selectedFolder}
-                onBmkClick={handleBmkClick}
-              />
-            }
-          ></Route>
-
-          <Route path="*" element={<NotFound />}></Route>
-        </Routes>
+        <Bookmark
+          filterBmks={filtered}
+          selectedFolder={selectedFolder}
+          onBmkClick={handleBmkClick}
+        />
       </div>
     </AppContainer>
   );

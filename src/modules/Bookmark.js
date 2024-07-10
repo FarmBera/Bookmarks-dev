@@ -8,6 +8,14 @@ import ColorFolder from "../styles/colors";
 // import BookmarkList from "../data/BookmarkList.js";
 import CreateLink from "../modules/CreateLink";
 
+async function getImage(imgName) {
+  const module = await import(`../icon/${imgName}.png`);
+  return module.default;
+}
+
+const loadingImg = await getImage("Loading");
+const noIconImg = await getImage("Noicon2");
+
 function Bookmark({ filterBmks, selectedFolder, onBmkClick }) {
   const [bmks, setBmks] = useState([]);
 
@@ -33,6 +41,8 @@ function Bookmark({ filterBmks, selectedFolder, onBmkClick }) {
                   domain={link.domain}
                   icon={link.icon}
                   selectedFolder={selectedFolder}
+                  loadingImg={loadingImg}
+                  noIconImg={noIconImg}
                 />
               </div>
             ))}
